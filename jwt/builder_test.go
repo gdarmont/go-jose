@@ -33,8 +33,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-jose/go-jose/v3"
-	"github.com/go-jose/go-jose/v3/json"
+	"github.com/gdarmont/go-jose/v3"
+	"github.com/gdarmont/go-jose/v3/json"
 )
 
 type testClaims struct {
@@ -275,7 +275,7 @@ func TestBuilderSignedAndEncrypted(t *testing.T) {
 	encrypter2, err := jose.NewEncrypter(jose.A128CBC_HS256, recipient, nil)
 	require.NoError(t, err, "Error creating encrypter.")
 	_, err = SignedAndEncrypted(rsaSigner, encrypter2).CompactSerialize()
-	assert.EqualError(t, err, "go-jose/go-jose/jwt: expected content type to be JWT (cty header)")
+	assert.EqualError(t, err, "gdarmont/go-jose/jwt: expected content type to be JWT (cty header)")
 }
 
 func TestBuilderHeadersSigner(t *testing.T) {

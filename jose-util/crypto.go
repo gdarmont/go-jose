@@ -17,8 +17,8 @@
 package main
 
 import (
-	jose "github.com/go-jose/go-jose/v3"
-	"github.com/go-jose/go-jose/jose-util/generator"
+	"github.com/gdarmont/go-jose/jose-util/generator"
+	jose "github.com/gdarmont/go-jose/v3"
 )
 
 func encrypt() {
